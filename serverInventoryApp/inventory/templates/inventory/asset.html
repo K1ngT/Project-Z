@@ -1,0 +1,32 @@
+{%extends 'main.html'%}
+
+{%block content%}
+
+<h1>Server Information</h1>
+
+<h1>{{assetObj.serverName}}</h1>
+
+<br>
+
+<h4>Server IP Address</h4>
+<p>{{assetObj.serverIp}}</p>
+<h4>Server Type</h4>
+<p>{{assetObj.serverType}}</p>
+<h4>Server Role</h4>
+<p>{{assetObj.serverRole}}</p>
+<h4>Server Special Notes</h4>
+<p>{{assetObj.serverNote}}</p>
+<h4>Server iDrac IP</h4>
+<p>{{assetObj.idrac_ip}}</p>
+
+<br>
+{% for location in locations%}
+
+<p>Region: {{location.region}}</p>
+<p>Country: {{location.country}}</p>
+<p>Site: {{location.site}}</p>
+<p>Site Address: {{location.siteAddress}}</p>
+
+{%endfor%}
+
+{%endblock content%}

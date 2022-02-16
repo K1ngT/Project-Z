@@ -1,0 +1,29 @@
+{%extends 'main.html'%}
+
+{% block content %}
+
+<h1>Location Information</h1>
+
+<table>
+    <tr>
+        <th>Region</th>
+        <th>Country</th>
+        <th>Country Site</th>
+        <th>Site Address</th>
+        <th></th>
+    </tr>
+    
+{% for location in locations%}
+    <tr>
+        <td>{{location.region}}</td>
+        <td>{{location.country}}</td>
+        <td>{{location.site}}</td>
+        <td>{{location.siteaddress}}</td>
+        <td><a href="{%url 'new-location'%}">Add New Location</a> </td>
+    </tr>
+
+{%endfor%}
+
+</table>
+
+{% endblock %}
